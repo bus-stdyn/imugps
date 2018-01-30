@@ -1,0 +1,4 @@
+ACTION=="add", ATTRS{idProduct}=="9d0f", ATTRS{idVendor}=="1b4f", SYMLINK+="imu_9d0f"
+ACTION=="add", ATTRS{idProduct}=="2303", ATTRS{idVendor}=="067b", SYMLINK+="gps_device"
+ACTION=="add", KERNEL=="ttyS0", SYMLINK+="ultrasonic_dev_tleft"
+ACTION=="add", KERNEL=="ttyS1", SYMLINK+="ultrasonic_dev_tright"
