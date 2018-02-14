@@ -1,0 +1,42 @@
+The IMU device currently used is 9DoF Razor IMU
+
+Please read the doc, imu_fields.pdf for configuration instruction with a serial terminal program like cutecom.
+
+
+Desired configuration of 9DoF for the program igsrv to work:
+
+ Imu is set to output accelerometers (x,y,z) - full-scale range +-16g
+ Imu is set to output gyro (x,y,x) - full-scale range +-2000 dps
+
+ Imu is set to output 8 feilds:
+ timestatmp, accelX, accelY, accelZ gyroX, gyroY, gyroZ, unknown
+
+ IMU output frequency is set to 50Hz, ie interval of 20ms.
+
+ Currently, the  IMU read frequency in the igsrv is set to 19ms.
+
+
+Brief instruction of
+
+1. the default baud rate set to connect to 9DoF is 11520
+If cannot read, change to 9600 to check out.
+
+2. cutecom and connect to /dev/imu_9DoF
+
+3. toggle " " (space bar) to pause output ( same command to resume later)
+
+4. toggle "r" (multiple times and see the output) to change rate to 50Hz
+
+5. toggle "A" to set the  accelerometer full-scale range to +-16g
+
+6. toggle "G" to set the gyroscope full-scale range to +-2000 dps
+
+7. toglle " " to resume output of data
+
+8. toggle "a" to ensure accelerometer is output
+
+9. toggle "g" to ensure gyroscope is output
+
+10. toggle "c" to ensure calculated instead of raw gyroscope output
+
+11. toggle "m" to ensure magnetometer is NOT output
